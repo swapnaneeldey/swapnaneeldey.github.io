@@ -78,11 +78,43 @@ n<!DOCTYPE HTML>
 								</article>
 
 						<!-- About -->
+							<!-- About -->
 							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<h2 class="major">Heaven</h2>
+								<div class="image-gallery">
+									<!-- JavaScript will add images here -->
+								</div>
 							</article>
+							
+							<script>
+								const imageFilenames = [
+									"Snapchat-919260810.jpg",
+									"IMG_20240701_155110.jpg",
+									"IMG_20240914_163709.jpg",
+									"IMG_20240729_172552.jpg",
+									"IMG_20240914_163815.jpg",
+									"IMG_20240918_221534.jpg",
+									"Snapchat-1105027006.jpg",
+									"Snapchat-580939430.jpg",
+									"Snapchat-1176261317.jpg",
+									"Snapchat-1436558340.jpg",
+									"Snapchat-375395679.jpg",
+									"Snapchat-421130260.jpg",
+									"Snapchat-769281126.jpg",
+									"Snapchat-792957822.jpg",
+									
+								];
+							
+								const galleryDiv = document.querySelector(".image-gallery");
+							
+								imageFilenames.forEach(filename => {
+									const img = document.createElement("img");
+									img.src = `images/pets/${filename}`;
+									img.alt = "Pet Image";
+									img.classList.add("gallery-image");
+									galleryDiv.appendChild(img);
+								});
+							</script>
 
 						<!-- Contact -->
 							<article id="contact">
