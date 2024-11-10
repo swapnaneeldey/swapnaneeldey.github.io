@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1655,4 +1658,18 @@ input, select, textarea {
 
 		body.is-preload #footer {
 			opacity: 0;
+		}
+		
+		.image-gallery {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr); /* Fixed to two columns */
+			gap: 10px; /* Space between images */
+		}
+		
+		.gallery-image {
+			width: 100%; /* Make each image fill its grid cell */
+			height: auto;
+			border-radius: 8px; /* Optional: rounded corners */
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+			object-fit: cover; /* Ensures images crop nicely if they have different aspect ratios */
 		}
